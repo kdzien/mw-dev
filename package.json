@@ -1,0 +1,33 @@
+{
+  "name": "marskosc-watroby",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.1.1",
+    "browser-sync": "^2.24.5",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "jquery.scrollto": "^2.1.2",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}

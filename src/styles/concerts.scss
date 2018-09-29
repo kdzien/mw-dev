@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+
+#concerts{
+  @include list-to-flat();
+  ul{
+    li{
+      display:flex;
+      flex-flow:row wrap;
+      @include rwd(breaks){
+        justify-content:center;
+      }
+      border-bottom:1px solid gray;
+      padding:10px 20px;
+      &:last-child{
+        border:none;
+      }
+      .date,.others{
+        flex:0.2;
+      }
+      .date{
+        display:flex;
+        .day{
+          font-size:35px;
+        }
+        div{
+          position:relative;
+          top:7px;
+          .month{
+            display:block;
+            margin-bottom:-10px;
+          }
+        }
+      }
+      .place,.city{
+        @include rwd(breaks){
+          flex:100% !important;
+          text-align:Center;
+          margin:5px 0px;
+        }
+      }
+      .place, .city,.others{
+        i{
+          margin-right:10px;
+          color:#2c2c2c;
+        }
+        flex:0.3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .others{
+        a{
+          width: min-content;
+          padding: 4px 20px;
+          border: solid 1px #2c2c2c;
+          margin-left: auto;
+          position:relative;
+          cursor:pointer;
+
+        }
+      }
+    }
+  }
+}

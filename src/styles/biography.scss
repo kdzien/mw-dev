@@ -1,0 +1,109 @@
+@import 'variables';
+@import 'mixins';
+
+#team{
+  padding:0;
+  .container-fluid{
+    padding:0px;
+  }
+  .band{
+    
+    display:flex;
+    flex-flow:row wrap;
+    .col-md-12{
+      padding:0;
+    }
+    .artist-item{
+      height:500px;
+      flex:0.25;
+      @include rwd(breaks){
+        flex:100%;
+      }
+      padding:0;
+      position:relative;
+      background-size:cover;
+      background-position:center;
+      transition:0.6s;
+      &:hover{
+        flex:0.5;
+        @include rwd(breaks){
+          flex:100%;
+        }
+      }
+      &:nth-child(1){
+        background-image:url("../images/koziol.jpg")
+      }
+      &:nth-child(2){
+        background-image:url("../images/mieszal.jpg")
+      }
+      &:nth-child(3){
+        background-image:url("../images/samek.jpg")
+      }
+      &:nth-child(4){
+        background-image:url("../images/tkacz.jpg")
+        
+      }
+    }
+    img{
+      height:100%;
+    }
+    .artist{
+      position:absolute;
+      bottom:0;
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.8));
+      left:0;
+      width:100%;
+      height:100%;
+      color:whitesmoke;
+      text-align:Center;
+      overflow:hidden;
+      opacity:0.7;
+      transition:0.2s;
+      &:hover{
+        opacity:1;
+      }
+      .artist-info{
+        position:absolute;
+        padding:5px;
+        bottom:-23px;
+        width:100%;
+        .artist-name{
+          font-size:13px;
+          letter-spacing:1px;
+          color:$first-color;
+        }
+        .artist-role{
+          font-size:14px;
+        }
+      }
+    }
+  }
+}
+#biography{
+  background-image:url("../images/microphone.jpg");
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding-bottom:0;
+
+  .section-header{
+    h1{
+      color:whitesmoke;
+    }
+  }
+  .description{
+    background-color:rgba(44,44,44,0.9);
+    padding:20px 30px;
+    margin-top:50px;
+    margin-bottom: 60px;
+    p{
+      color:whitesmoke;
+      text-align:justify;
+      font-size:13px;
+      &:first-child{
+        margin-top:1rem;
+      }
+    }
+  }
+  
+}

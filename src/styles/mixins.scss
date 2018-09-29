@@ -1,0 +1,23 @@
+@mixin list-to-flat(){
+  ul{
+    padding:0;
+    list-style-type:none;
+    li{
+      display:inline-block;
+    }
+  }
+}
+@mixin center-position(){
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+@mixin rwd($media){
+  @if $media == breaks {
+      @media only screen and (max-width: 425px) { @content; }
+    } @else if $media == breakm {
+      @media only screen and (max-width: 993px) { @content; }
+    }
+}

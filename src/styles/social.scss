@@ -1,0 +1,56 @@
+@import 'mixins';
+@import 'variables';
+
+
+#social{
+    position:relative;
+
+  .container{
+    @include list-to-flat();
+    ul{
+      margin:0 auto;
+      width:fit-content;
+      a{
+        &:nth-child(1):hover{
+          i{
+            color:#3b5998;
+          }
+        }
+        &:nth-child(2):hover{
+          i{
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+        &:nth-child(3):hover{
+          i{
+            color:	#cc181e; 
+          }
+        }
+        &:nth-child(4):hover{
+          i{
+            color: #ff8800;
+          }
+        }
+      }
+      li{
+        cursor:pointer;
+        padding:40px;
+        background-color:#2c2c2c;
+        margin:0px 15px;
+        @include rwd(breakm){
+          padding:20px;
+        }
+        i{
+          @include rwd(breakm){
+            font-size:20px;
+          }
+          font-size:45px;
+          color:#575757;
+        }
+        
+      }
+    }
+  }
+}
